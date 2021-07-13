@@ -53,6 +53,11 @@ def about():
     return render_template('about.html', subtitle='About Page')
 
 
+@app.route("/captions")
+def captions():
+    TITLE = "What is Flask?"
+    FILE_NAME = "what_is_flask_audio.wav"
+    return render_template('captions.html', songName=TITLE, file=FILE_NAME)
 
 
 if __name__ == '__main__':               # this should always be at the end avoids the need for environment variables
